@@ -1,0 +1,75 @@
+Copyright (c) {username}
+All rights reserved.
+
+Section 1 - Definitions
+
+1.1 "NonCommercial" pertains to any use, distribution, or modification of the 
+	licensed material that does not primarily aim to achieve commercial 
+	advantage or generate monetary compensation. This includes, but is not 
+	limited to, activities such as distributing the licensed material as part 
+	of an application or product that is sold, using the licensed material in 
+	advertising, and creating products or services with the licensed material 
+	that are subsequently sold.
+
+1.2 "Adapted Material" refers to any work derived from or based upon the licensed
+	material. This includes, but is not limited to, translations, alterations, 
+	rearrangements, transformations, source code modifications, compiled code
+	alterations, architectural redesigns, or the integration of the licensed
+	material into other software projects.
+
+1.3 "NonAdapted Material" refers to exact copies of the licensed material, either 
+	in source code or binary form, which are reproduced without any changes, 
+	modifications, or transformations.
+
+Section 2 - License Conditions
+
+2.1 Distribution and usage in source or binary forms are permitted solely for
+	NonCommercial purposes for both NonAdapted Material and Adapted Material
+	excluding NonAdapted Material cases in 2.4 section.
+	
+2.2 Redistributions for any NonAdapted Material or Adapted Material, either 
+        in source code or binary form, must include the original copyright notice, 
+        this license, the disclaimer, and comply with the requirements specified 
+        herein. For binary form redistributions, these documents must be included 
+        in any provided documentation or materials or a clearly accessible link 
+        to this license ensuring that recipients can easily review the license terms.
+
+2.3 For any Adapted Material, whether in source code or binary form, and for any 
+	instance of the licensed material utilized in applications accessible over
+	the internet that run on a server, the source code must be made accessible
+	through a public repository, a downloadable archive, or an equivalent 
+	method, ensuring that users have the capability to access, review, and 
+	download the code, and must clearly credit the original work and author. 
+
+2.4 For any NonAdapted Material that are offered on download sites, marketplaces, or
+	software distribution platforms, are permitted under the condition that any 
+	economic benefit derived from such distribution is strictly indirect, including 
+	but not limited to advertisements or link redirectors. Direct sales or charges 
+	for access to the licensed material are not permitted under this license. Upon 
+	the original author distributing the material on the same platform, all alternative
+	downloads and any associated revenue-generating mechanisms must be discontinued 
+	immediately. Acceptance of this license constitutes agreement that the copyright
+	holder may request the immediate cessation of such downloads and activities on 
+	such platforms, and the distributor must comply with such request without delay.
+
+2.5 Distributing the licensed material alongside unrelated or harmful software, such as adware, 
+	malware, or spyware or implying endorsement or association with the original author 
+	or recognized entities without permission, is prohibited.
+
+Section 3 - Updates and Revisions
+
+3.1 The copyright holder retains the right to amend, update, or otherwise modify this
+	license at any time without prior notice. Users should periodically review the
+	license terms to stay informed of any changes.
+
+3.2 Continued use of the licensed material after such changes signifies acceptance of the 
+	revised license terms. It is the user's responsibility to ensure ongoing compliance 
+	with the most current version of the license.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

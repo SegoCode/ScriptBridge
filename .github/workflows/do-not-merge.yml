@@ -1,0 +1,26 @@
+name: Do not merge
+
+on:
+  pull_request:
+    types: [opened, edited, labeled, unlabeled, synchronize, ready_for_review]
+
+jobs:
+  check_wip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if PR is ready to be merged
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const forbiddenWords = ['wip', '[wip]', 'work in progress', 'in progress', 'do not merge', 'do-not-merge', 'do_not_merge', 'dont merge', 'draft', '🚧', 'needs work'];
+            const pr = context.payload.pull_request;
+            const prTitle = pr.title.toLowerCase();
+            const labels = pr.labels.map(label => label.name.toLowerCase());
+            const isDraft = pr.draft;
+            const hasForbiddenLabel = labels.some(label => forbiddenWords.some(word => label.includes(word)));
+            const hasForbiddenTitle = forbiddenWords.some(word => prTitle.includes(word));
+            if (isDraft || hasForbiddenLabel || hasForbiddenTitle) {
+              core.setFailed('The Pull Request is in draft mode or has labels or title indicating it should not be merged.');
+            } else {
+              console.log('The Pull Request is ready to be merged.');
+            }

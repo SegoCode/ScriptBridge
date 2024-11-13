@@ -1,0 +1,19 @@
+{
+  "name": "ScriptBridge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "bin": "main.js",
+  "scripts": {
+    "build-exe": "pkg . --targets=node18-win --output ScriptBridge.exe"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+  "peerDependencies": {
+    "pkg": "^5.8.1"
+  }
+}
