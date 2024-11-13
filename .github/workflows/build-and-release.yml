@@ -1,0 +1,85 @@
+name: Build and Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+      - name: Fetch all tags
+        run: git fetch --tags
+
+      - name: Get latest tag
+        id: get_latest_tag
+        run: |
+          # Get the latest tag
+          latest_tag=$(git describe --tags "$(git rev-list --tags --max-count=1)" 2>/dev/null || echo "")
+          echo "latest_tag=$latest_tag" >> $GITHUB_ENV
+
+      - name: Determine new version
+        id: determine_version
+        run: |
+          latest_tag=${{ env.latest_tag }}
+          if [ -z "$latest_tag" ]; then
+            # Initialize the version to 1.0 if no tags exist
+            new_version="1.0"
+          else
+            # Extract the major and minor version and increment the minor version
+            major_version=$(echo $latest_tag | cut -d. -f1)
+            minor_version=$(echo $latest_tag | cut -d. -f2)
+            new_minor_version=$((minor_version + 1))
+            new_version="$major_version.$new_minor_version"
+
+            # Check if the new version tag already exists
+            while git rev-parse "refs/tags/$new_version" >/dev/null 2>&1; do
+              new_minor_version=$((new_minor_version + 1))
+              new_version="$major_version.$new_minor_version"
+            done
+          fi
+          echo "new_version=$new_version" >> $GITHUB_ENV
+
+      # TODO: Set up Node.js environment and pnpm
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        run: |
+          npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Compile node script for multiple platforms
+        run: pnpm run build-exe
+
+      - name: Create new tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          new_version=${{ env.new_version }}
+          git tag -a "$new_version" -m "Automatically generated version $new_version"
+          git push origin "$new_version"
+
+      - name: Create Release and Upload Assets
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/*  # Adjust if the compiled files are located elsewhere
+          tag_name: ${{ env.new_version }}
+          name: ScriptBridge
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
