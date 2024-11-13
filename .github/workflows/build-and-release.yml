@@ -56,13 +56,16 @@ jobs:
           cache: 'pnpm'
 
       - name: Install pnpm
+        working-directory: ./code
         run: |
           npm install -g pnpm
 
       - name: Install dependencies
+        working-directory: ./code
         run: pnpm install
 
       - name: Compile node script for multiple platforms
+        working-directory: ./code
         run: pnpm run build-exe
 
       - name: Create new tag
@@ -76,7 +79,7 @@ jobs:
       - name: Create Release and Upload Assets
         uses: softprops/action-gh-release@v1
         with:
-          files: build/*  # Adjust if the compiled files are located elsewhere
+          files: code/build/*  # Adjust if the compiled files are located elsewhere
           tag_name: ${{ env.new_version }}
           name: ScriptBridge
           draft: false
