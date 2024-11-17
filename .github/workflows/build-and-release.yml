@@ -48,12 +48,10 @@ jobs:
           fi
           echo "new_version=$new_version" >> $GITHUB_ENV
 
-      # TODO: Set up Node.js environment and pnpm
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-          cache: 'pnpm'
 
       - name: Install pnpm
         working-directory: ./code
