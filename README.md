@@ -1,19 +1,6 @@
 # ScriptBridge
 
-
-<p align="center">
-  <a href="#about">About</a> •
-  <a href="#features">Features</a> •
-  <a href="#quick-start--information">Quick Start & Information</a> •
-  <a href="#download">Download</a>
-</p>
-
-## About
-
 ScriptBridge is bridge to execute various types of files, including `.ps1`, `.bat`, `.cmd`, `.vbs`, `.js`, `.py`, and `.exe`, from a single point.
-
-## Features
-
 
 ## Quick Start & Information
 
