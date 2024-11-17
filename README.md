@@ -21,7 +21,7 @@ Follow these steps to set up and use ScriptBridge:
 
 1. **Clone the repository**:
    ```shell
-   git clone https://github.com/{username}/ScriptBridge.git
+   git clone https://github.com/SegoCode/ScriptBridge.git
    cd ScriptBridge
    ```
 
@@ -45,10 +45,10 @@ Follow these steps to set up and use ScriptBridge:
 
 ## Download
 
-You can download the latest version of ScriptBridge from the [releases page](https://github.com/{username}/ScriptBridge/releases).
+You can download the latest version of ScriptBridge from the [releases page](https://github.com/SegoCode/ScriptBridge/releases).
 
 ---
-<p align="center"><a href="https://github.com/{username}/ScriptBridge/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo={username}/ScriptBridge" />
+<p align="center"><a href="https://github.com/SegoCode/ScriptBridge/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=SegoCode/ScriptBridge" />
 </a></p>
 
