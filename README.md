@@ -6,23 +6,23 @@ ScriptBridge is bridge to execute various types of files, including `.ps1`, `.ba
 
 Follow these steps to set up and use ScriptBridge:
 
-1. **Clone the repository**:
+**Clone the repository**:
    ```shell
    git clone https://github.com/SegoCode/ScriptBridge.git
    cd ScriptBridge
    ```
 
-2. **Install dependencies**:
+**Install dependencies**:
    ```shell
    pnpm install
    ```
 
-3. **Build the executable**:
+**Build the executable**:
    ```shell
    pnpm run build-exe
    ```
 
-4. **Run a script using ScriptBridge**:
+**Run a script using ScriptBridge**:
    ```shell
    ./ScriptBridge.exe "path/to/your/script.ps1" -yourArgument value
    ```
