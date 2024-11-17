@@ -1,6 +1,6 @@
 # ScriptBridge
 
-ScriptBridge is bridge to execute various types of files, including `.ps1`, `.bat`, `.cmd`, `.vbs`, `.js`, `.py`, and `.exe`, from a single point.
+ScriptBridge is bridge to execute various types of files, including `.ps1`, `.bat`, `.cmd`, `.vbs`, `.js`, `.py` from a single point.
 
 ## Quick Start & Information
 
